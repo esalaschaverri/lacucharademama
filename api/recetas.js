@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
 var formidable = require('formidable');
+var Swal = require('sweetalert2');
 
 var Platillo = require("../schemas/platillos.js");
 
@@ -45,7 +46,8 @@ router.post('/insertar', function (req, res) {
     ingredientes: req.body.ingredientes,
   });
 
-  platilloNuevo.save()
+  platilloNuevo.save();
+  Swal.fire('El platillo ha sido creado');
   return res.redirect("../index.html")
 });
 

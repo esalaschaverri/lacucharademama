@@ -25,7 +25,7 @@
 
     <!-- Crear cuenta -->
 
-        <form class="crear-cuenta" action="/recetas/insertar" method="post" onsubmit="return validar()">
+        <form class="crear-platillo" action="/recetas/insertar" method="post">
 
             <h1 class="">REGISTRE UN NUEVO PLATILLO</h1>
 
@@ -34,7 +34,7 @@
             <input type="text" id="nombre" name="nombre" placeholder="NOMBRE" class="inputs" required> <br><br/>
 
             <label class="text-morado" for="precio">PRECIO</label><br>
-            <input type="number" id="precio" name="precio" step="0.01" placeholder="PRECIO" class="inputs" required> <br><br/>
+            <input type="number" id="precio" name="precio" step="0.01" min="0.01" placeholder="PRECIO" class="inputs" required> <br><br/>
 
 
             <label class="text-morado">INGREDIENTES</label><br>
@@ -57,9 +57,8 @@
             <input type="checkbox" id="ingrediente9" name="ingredientes" value="masa">
             <label for="ingrediente9"> masa</label><br>
 
-
             <!-- <button onclick="insertarCuenta()" class="button-crear">CREAR CUENTA</button> -->
-            <input class="crear" type="submit" value="CREAR CUENTA">
+            <input class="crear" type="submit" value="REGISTRAR PLATILLO">
 
         </form>
 
