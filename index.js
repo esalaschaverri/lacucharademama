@@ -6,6 +6,14 @@ var mongoose = require('mongoose');
 
 mongoose.connect("mongodb+srv://elchef:MiCocina1234@cluster0.egsfw.gcp.mongodb.net/lacucharademama?retryWrites=true&w=majority");
 
+const cors=require("cors");
+const corsOptions ={
+  origin:'*',
+  credentials:true,            //access-control-allow-credentials:true
+  optionSuccessStatus:200,
+}
+
+app.use(cors(corsOptions)) // Use this after the variable declaration
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());

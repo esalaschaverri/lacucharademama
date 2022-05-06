@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <title>Muestra Platillos</title>
+    <link rel="stylesheet" type="text/css" href="CSS/muestra_platillos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="cargarTabla()">
+
+    <!-- Logo y Menu -->
+    <div class="contenedor">
+        <div class="logo-menu">
+            <a href="index.html"><img class="logo" src="img/lacocinademama.png" /></a>
+        </div>
+
+        <div class="menu-top">
+            <a href="index.html">INICIO</a>
+            <a href="muestra_platillos.html">MIS PLATILLOS</a>
+            <a href="registrar_platillos.html">REGISTRAR PLATILLO</a>
+        </div>
+    </div>
+
+
+    <!-- Busqueda -->
+
+    <div class="contenedor top-search">
+        <div class="text-search">
+            <h1>LOS PLATILLOS</h1>
+        </div>
+    </div>
+
+
+    <div id="RecetaMuestra" class="contenedor">
+<!--        <table id="table"></table>-->
+    </div>
+
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <h4>lacocinademama@gmail.com</h4>
+        <h4>+506 83115612</h4>
+        <p class="derechos">DERECHOS RESERVADOS</p>
+    </div>
+
+    <script>
+
+
+        function renderCreateTable(json) {
+            var cols = [];
+
+            for (var i = 0; i < json.length; i++) {
+                for (var k in json[i]) {
+                    if (cols.indexOf(k) === -1) {
+
+                        // Push all keys to the array
+                        cols.push(k);
+                    }
+                }
+            }
+
+            // Create a table element
+            var table = document.createElement("table");
+
+            // Create table row tr element of a table
+            var tr = table.insertRow(-1);
+
+            for (var i = 0; i < cols.length; i++) {
+
+                // Create the table header th element
+                var theader = document.createElement("th");
+                theader.innerHTML = cols[i];
+
+                // Append columnName to the table row
+                tr.appendChild(theader);
+            }
+
+            // Adding the data to the table
+            for (var i = 0; i < json.length; i++) {
+
+                // Create a new row
+                trow = table.insertRow(-1);
+                for (var j = 0; j < cols.length; j++) {
+                    var cell = trow.insertCell(-1);
+
+                    // Inserting the cell at particular place
+                    cell.innerHTML = json[i][cols[j]];
+                }
+            }
+
+            // Add the newly created table containing json data
+            var el = document.getElementById("RecetaMuestra");
+            el.innerHTML = "";
+            el.appendChild(table);
+        }
+
+        function cargarTabla() {
+            fetch("http://localhost:5000/recetas/")
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+                .then(
+                    function (json) {
+
+                        for (var i = 0; i < json.length; i++) {
+                            delete json[i]._id;
+                            delete json[i].__v;
+                        }
+                        renderCreateTable(json);
+
+                    }
+                )
+        }
+    </script>
+
+</body>
+
+</html>

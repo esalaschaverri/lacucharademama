@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <title>Registrar platillos</title>
+    <link rel="stylesheet" type="text/css" href="CSS/registra_platillos.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/655682710d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Logo y Menu -->
+    <div class="contenedor">
+        <div class="logo-menu" >
+            <a href="index.html"><img class="logo" src="img/lacocinademama.png" /></a>
+        </div>
+
+        <div class="menu-top">
+            <a href="index.html">INICIO</a>
+            <a href="muestra_platillos.html">MIS PLATILLOS</a>
+            <a href="registrar_platillos.html">REGISTRAR PLATILLO</a>
+        </div>
+    </div>
+
+    <!-- Crear cuenta -->
+
+        <form class="crear-cuenta" action="/recetas/insertar" method="post" onsubmit="return validar()">
+
+            <h1 class="">REGISTRE UN NUEVO PLATILLO</h1>
+
+            <label class="text-morado" for="nombre">NOMBRE</label><br>
+
+            <input type="text" id="nombre" name="nombre" placeholder="NOMBRE" class="inputs" required> <br><br/>
+
+            <label class="text-morado" for="precio">PRECIO</label><br>
+            <input type="number" id="precio" name="precio" step="0.01" placeholder="PRECIO" class="inputs" required> <br><br/>
+
+
+            <label class="text-morado">INGREDIENTES</label><br>
+            <input type="checkbox" id="ingrediente1" name="ingredientes" value="arroz">
+            <label for="ingrediente1"> Arroz</label><br>
+            <input type="checkbox" id="ingrediente2" name="ingredientes" value="agua">
+            <label for="ingrediente2"> Agua</label><br>
+            <input type="checkbox" id="ingrediente3" name="ingredientes" value="frijoles">
+            <label for="ingrediente3"> Frijoles</label><br>
+            <input type="checkbox" id="ingrediente4" name="ingredientes" value="aceite">
+            <label for="ingrediente4"> aceite</label><br>
+            <input type="checkbox" id="ingrediente5" name="ingredientes" value="huevo">
+            <label for="ingrediente5"> huevo</label><br>
+            <input type="checkbox" id="ingrediente6" name="ingredientes" value="sal">
+            <label for="ingrediente6"> sal</label><br>
+            <input type="checkbox" id="ingrediente7" name="ingredientes" value="carne">
+            <label for="ingrediente7"> carne</label><br>
+            <input type="checkbox" id="ingrediente8" name="ingredientes" value="azucar">
+            <label for="ingrediente8"> azucar</label><br>
+            <input type="checkbox" id="ingrediente9" name="ingredientes" value="masa">
+            <label for="ingrediente9"> masa</label><br>
+
+
+            <!-- <button onclick="insertarCuenta()" class="button-crear">CREAR CUENTA</button> -->
+            <input class="crear" type="submit" value="CREAR CUENTA">
+
+        </form>
+
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <h4>lacocinademama@gmail.com</h4>
+        <h4>+506 83115612</h4>
+        <p class="derechos">DERECHOS RESERVADOS</p>
+    </div>
+
+    <script src="registrar_platillos.js"></script>
+
+</body>
+</html>

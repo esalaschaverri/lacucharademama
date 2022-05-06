@@ -1,0 +1,253 @@
+table{
+    flex-basis: 50%;
+    text-align: center;
+    margin-right: 1%;
+    margin-top: 1%;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #36008D;
+    color: white;
+}
+
+
+
+div{
+    box-sizing: border-box;
+}
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    color: #505255;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+h1{
+    font-family: 'Bebas Neue';
+    color: #36008D;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+h2{
+    font-family: 'Bebas Neue';
+    color: #36008D;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.autores a{
+    font-family: 'Bebas Neue';
+    color: #36008D;
+}
+
+blockquote{
+    font-family: 'Bebas Neue';
+    color:black;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+.logo-menu{
+    flex-basis: 20%;
+}
+
+.logo{
+    width: 100%;
+    padding-left: 5%;
+    padding-top: 3%;
+}
+
+.menu-top{
+    flex-basis: 80%;
+    padding-top: 3%;
+    padding-right: 3%;
+    text-align: right;
+}
+
+.menu-top a:nth-child(n+0):nth-child(-n+6){
+    border-right: 2px #1CCAD8 solid;
+    padding-right: 1%;
+}
+
+.menu-top a {
+    color: #36008D;
+    text-decoration: none;
+    font-family: 'Bebas Neue';
+    padding-left: 1%;
+    font-size: 20px;
+}
+
+.menu-top a:hover{
+    color: #1CCAD8;
+}
+
+.buttonDiv{
+    flex-basis: 36%;
+    text-align: left;
+}
+
+.text-search {
+    flex-basis: 50%;
+    text-align: center;
+    margin-right: 1%;
+    margin-top: 1%;
+}
+
+.button-search{
+    border: 3px solid #36008D;
+    color: #36008D;
+    border-radius: 5px;
+    background: #E2E0E5 ;
+    font-size: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue';
+    text-align: center;
+}
+
+button{
+    border: 3px solid #36008D;
+    color: #F0E100;
+    border-radius: 5px;
+    background: #36008D ;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 10px;
+}
+
+.top-search {
+    margin-top: 30px;
+}
+
+.search{
+    background-color: #36008D;
+    border: 3px solid #36008D;
+    border-radius: 5px;
+    color: #F0E100;
+    padding-top: 9px;
+    padding-bottom: 7px;
+    font-family: 'Bebas Neue';
+}
+
+.button{
+    text-align: right;
+    color: #36008D;
+    margin-right: 3%;
+}
+
+.button2{
+    background-color: #36008D;
+    padding: 10px;
+    border: 2px solid #36008D;
+    border-radius: 7px;
+    color: #F0E100;
+    margin-right: 1%;
+}
+
+.button3{
+    background-color: #F0E100;
+    padding: 10px;
+    border: 2px solid #36008D;
+    border-radius: 7px;
+}
+
+.button2:hover, .button3:hover {
+    transform: scale(1.1);
+}
+
+.muestra{
+    flex-basis: 20%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.carritoadd{
+    border: 3px solid #36008D;
+    color: #F0E100;
+    border-radius: 5px;
+    background: #36008D ;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 10px;
+}
+
+.muestra p:hover{
+    color: #1CCAD8;
+}
+.muestra h2:hover{
+    color: #1CCAD8;
+}
+.muestra a{
+    text-decoration: none;
+}
+
+.muestra img{
+    width: 150px;
+}
+
+.logos-social{
+    width: 35px;
+    cursor: pointer;
+}
+
+.social{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: #36008D;
+}
+
+.footer{
+    background-color: #F2F2F2;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer h4{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #36008D;
+    text-align: center;
+    font-size: 14px;
+    margin: 2px;
+}
+
+.derechos{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #1A181B;
+    text-align: center;
+    font-size: 10px;
+    margin: 15px;
+}
