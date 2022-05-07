@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/655682710d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 
 <body>
@@ -36,29 +36,74 @@
             <label class="text-morado" for="precio">PRECIO</label><br>
             <input type="number" id="precio" name="precio" step="0.01" min="0.01" placeholder="PRECIO" class="inputs" required> <br><br/>
 
-
             <label class="text-morado">INGREDIENTES</label><br>
-            <input type="checkbox" id="ingrediente1" name="ingredientes" value="arroz">
-            <label for="ingrediente1"> Arroz</label><br>
-            <input type="checkbox" id="ingrediente2" name="ingredientes" value="agua">
-            <label for="ingrediente2"> Agua</label><br>
-            <input type="checkbox" id="ingrediente3" name="ingredientes" value="frijoles">
-            <label for="ingrediente3"> Frijoles</label><br>
-            <input type="checkbox" id="ingrediente4" name="ingredientes" value="aceite">
-            <label for="ingrediente4"> aceite</label><br>
-            <input type="checkbox" id="ingrediente5" name="ingredientes" value="huevo">
-            <label for="ingrediente5"> huevo</label><br>
-            <input type="checkbox" id="ingrediente6" name="ingredientes" value="sal">
-            <label for="ingrediente6"> sal</label><br>
-            <input type="checkbox" id="ingrediente7" name="ingredientes" value="carne">
-            <label for="ingrediente7"> carne</label><br>
-            <input type="checkbox" id="ingrediente8" name="ingredientes" value="azucar">
-            <label for="ingrediente8"> azucar</label><br>
-            <input type="checkbox" id="ingrediente9" name="ingredientes" value="masa">
-            <label for="ingrediente9"> masa</label><br>
+            <table>
+                <tr>
+                    <th>Granos</th>
+                    <th>Carnes</th>
+                    <th>Condimentos</th>
+                    <th>Otros</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="ingrediente1" name="ingredientes" value="arroz">
+                        <label for="ingrediente1"> Arroz</label><br>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" id="ingrediente2" name="ingredientes" value="carne">
+                        <label for="ingrediente2"> carne</label><br>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="ingrediente3" name="ingredientes" value="sal">
+                        <label for="ingrediente3"> sal</label><br>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="ingrediente4" name="ingredientes" value="agua">
+                        <label for="ingrediente4"> Agua</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="ingrediente5" name="ingredientes" value="frijoles">
+                        <label for="ingrediente5"> Frijoles</label><br>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="ingrediente6" name="ingredientes" value="pollo">
+                        <label for="ingrediente6"> pollo</label><br>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="ingrediente7" name="ingredientes" value="azúcar">
+                        <label for="ingrediente7"> azúcar</label><br>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="ingrediente8" name="ingredientes" value="aguacate">
+                        <label for="ingrediente8"> aguacate</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="ingrediente9" name="ingredientes" value="lentejas">
+                        <label for="ingrediente9"> lentejas</label><br>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="ingrediente10" name="ingredientes" value="pescado">
+                        <label for="ingrediente10"> pescado</label><br>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="ingrediente11" name="ingredientes" value="pimienta">
+                        <label for="ingrediente11"> pimienta</label><br>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="ingrediente12" name="ingredientes" value="huevo">
+                        <label for="ingrediente12"> huevo</label><br>
+                    </td>
+                </tr>
+            </table>
+
 
             <!-- <button onclick="insertarCuenta()" class="button-crear">CREAR CUENTA</button> -->
-            <input class="crear" type="submit" value="REGISTRAR PLATILLO">
+            <input class="crear" id="trigger" type="submit" value="REGISTRAR PLATILLO">
 
         </form>
 
@@ -72,7 +117,11 @@
         <p class="derechos">DERECHOS RESERVADOS</p>
     </div>
 
-    <script src="registrar_platillos.js"></script>
+    <script>
+        document.getElementById("trigger").addEventListener('click', function (){
+            Swal.fire("Platillo Creado");
+        })
+    </script>
 
 </body>
 </html>

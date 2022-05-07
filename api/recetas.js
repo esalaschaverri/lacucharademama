@@ -47,7 +47,6 @@ router.post('/insertar', function (req, res) {
   });
 
   platilloNuevo.save();
-  Swal.fire('El platillo ha sido creado');
   return res.redirect("../index.html")
 });
 
